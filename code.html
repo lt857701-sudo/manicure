@@ -1,0 +1,642 @@
+<!DOCTYPE html><html lang="pt-BR" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Nailé Nail Studio | Cuidado Moderno &amp; Estética para Unhas</title>
+<!-- Google Fonts for Elegant Serif and Modern Sans + Handwritten Script -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              charcoal: '#1A1817',
+              nude: '#FAF7F5',
+              softPink: '#F6EAE6',
+              blush: '#EBDCD7',
+              accentPink: '#E8A598',
+              cardBg: '#FFFFFF',
+              borderMuted: '#EFE7E4'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            script: ['"Caveat"', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-typography">
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #1A1817;
+      background-color: #FAF7F5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-cormorant {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .font-script {
+      font-family: 'Caveat', cursive;
+    }
+  </style>
+<style data-purpose="custom-scroll-and-effects">
+    .smooth-transition {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .hover-lift:hover {
+      transform: translateY(-4px);
+    }
+  </style>
+</head>
+<body class="bg-brand-nude text-brand-charcoal antialiased selection:bg-brand-accentPink selection:text-white">
+<!-- BEGIN: TopAnnouncementBar -->
+<div class="bg-brand-charcoal text-white text-xs py-2.5 px-4 relative z-50" data-purpose="announcement-banner">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex-1 text-center font-medium tracking-wide">
+<span class="">✦ Para orçamentos e agendamentos especiais de eventos</span>
+<a class="inline-flex items-center ml-2 font-semibold underline underline-offset-4 hover:text-brand-accentPink transition-colors" href="#contato">
+          Solicitar Orçamento →
+        </a>
+</div>
+<button aria-label="Fechar aviso" class="text-gray-400 hover:text-white text-base leading-none pl-2 focus:outline-none" type="button">
+        ×
+      </button>
+</div>
+</div>
+<!-- END: TopAnnouncementBar -->
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 bg-[#FAF7F5]/90 backdrop-blur-md border-b border-brand-borderMuted z-40" data-purpose="main-navigation">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="group flex flex-col items-center" href="#">
+<span class="font-cormorant text-2xl lg:text-3xl font-bold tracking-[0.22em] uppercase text-brand-charcoal group-hover:opacity-80 transition-opacity">
+          NAILÉ
+        </span>
+<span class="text-[9px] uppercase tracking-[0.35em] text-gray-500 font-semibold -mt-1">
+          Nail Studio
+        </span>
+</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-charcoal/80">
+<a class="text-brand-charcoal font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-brand-charcoal" href="#inicio">Início</a>
+<a class="hover:text-brand-charcoal transition-colors" href="#servicos">Serviços</a>
+<a class="hover:text-brand-charcoal transition-colors" href="#galeria">Galeria</a>
+<a class="hover:text-brand-charcoal transition-colors" href="#sobre">Sobre</a>
+<a class="hover:text-brand-charcoal transition-colors" href="#depoimentos">Depoimentos</a>
+<a class="hover:text-brand-charcoal transition-colors" href="#contato">Contato</a>
+</nav>
+<!-- Action Area: Search & Pill Button -->
+<div class="flex items-center space-x-4">
+<button aria-label="Buscar serviços" class="p-2 text-brand-charcoal hover:text-brand-accentPink transition-colors" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden sm:inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-brand-charcoal text-white text-xs font-semibold tracking-wider uppercase hover:bg-neutral-800 hover-lift shadow-sm transition-all duration-200" href="#agendamento">
+          Agendar Horário →
+        </a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative overflow-hidden bg-gradient-to-b from-[#FAF7F5] to-[#F6ECE7]/60 pt-10 pb-16 lg:py-20" data-purpose="hero-section" id="inicio"><div class="max-w-7xl mx-auto px-6 lg:px-12 relative">
+  <div class="relative min-h-[580px] lg:min-h-[620px] rounded-3xl overflow-hidden flex flex-col justify-between p-6 sm:p-10 lg:p-14 shadow-sm" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYCLPJhbfgHH86xhGPg7Ia5nHFkuPIMHPNm67urKw4KFzcomiENkiLVGEBGtipe1IJk6p8jVS-hgggN0y8OC3ZMfEQNljfJTxn6XTrWgHiNu25a95hhx5igdzIT3JT18E1wdQnVj9eCovnOiDPHLrUMq-Q_hG6SpLatkHrB33OA2kvrlyniGsMdPy-ApOpDe1Bwyh6JT6pUiRcAIKncuettmyg-huCc_TTswcUWXP9y6mC_JCCeTf_cQ'); background-size: cover; background-position: center right;">
+    <!-- Gradient overlay covering left side and transitioning smoothly to transparent by 55% -->
+    <div class="absolute inset-0 z-0 pointer-events-none" style="background: linear-gradient(to right, #FFF5F2 0%, #FFF5F2 35%, rgba(255, 245, 242, 0.85) 45%, rgba(255, 245, 242, 0) 55%);"></div>
+
+    <!-- Floating Handwritten Note at upper right over the hero photography -->
+    <div class="absolute top-6 right-6 sm:top-10 sm:right-12 z-20 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-xl border border-brand-softPink rotate-3">
+      <p class="font-script text-2xl sm:text-3xl text-brand-charcoal leading-tight text-center">
+        Unhas Lindas,<br>Você Mais Feliz ♡
+      </p>
+    </div>
+
+    <!-- Hero Content: Text & CTA buttons on the left -->
+    <div class="relative z-10 max-w-xl space-y-6 pt-4 lg:pt-8">
+      <div class="inline-flex items-center space-x-2">
+        <span class="w-2 h-2 rounded-full bg-brand-accentPink"></span>
+        <span class="text-xs uppercase tracking-[0.25em] font-semibold text-gray-500">
+          Beleza na Ponta dos Dedos
+        </span>
+      </div>
+      <h1 class="font-cormorant text-5xl sm:text-6xl lg:text-7xl font-normal leading-[1.08] text-brand-charcoal tracking-tight">
+        Unhas Impecáveis,<br>
+        <span class="italic font-medium">Confiança</span> Todos os Dias
+      </h1>
+      <p class="text-gray-600 text-base sm:text-lg max-w-lg font-normal leading-relaxed">
+        Cuidado premium para suas unhas, designs deslumbrantes e uma experiência relaxante de autocuidado — porque você merece sentir-se radiante.
+      </p>
+      <div class="flex flex-wrap items-center gap-4 pt-2">
+        <a class="px-8 py-3.5 rounded-full bg-brand-charcoal text-white text-xs font-semibold tracking-wider uppercase hover:bg-neutral-800 hover-lift shadow-md transition-all" href="#agendamento">
+          Agende Seu Horário →
+        </a>
+        <button class="inline-flex items-center space-x-3 px-6 py-3 rounded-full border border-gray-300 text-xs font-semibold uppercase tracking-wider text-brand-charcoal hover:bg-white transition-colors" type="button">
+          <span class="w-6 h-6 rounded-full bg-brand-charcoal text-white flex items-center justify-center text-[10px]">▶</span>
+          <span class="">Conheça Nosso Estúdio</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Four Trust Pillars beneath the hero content -->
+    <div class="relative z-10 grid grid-cols-2 sm:grid-cols-4 gap-6 pt-12 mt-8 border-t border-brand-borderMuted/80 max-w-3xl">
+      <!-- Feature 1 -->
+      <div class="space-y-1">
+        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm text-brand-accentPink mb-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        </div>
+        <h4 class="text-xs font-bold text-brand-charcoal tracking-wide uppercase">Higiênico &amp; Seguro</h4>
+        <p class="text-[11px] text-gray-500">Sua segurança sempre em 1º lugar</p>
+      </div>
+      <!-- Feature 2 -->
+      <div class="space-y-1">
+        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm text-brand-accentPink mb-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        </div>
+        <h4 class="text-xs font-bold text-brand-charcoal tracking-wide uppercase">Produtos Premium</h4>
+        <p class="text-[11px] text-gray-500">Amados por especialistas</p>
+      </div>
+      <!-- Feature 3 -->
+      <div class="space-y-1">
+        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm text-brand-accentPink mb-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        </div>
+        <h4 class="text-xs font-bold text-brand-charcoal tracking-wide uppercase">Nail Designers</h4>
+        <p class="text-[11px] text-gray-500">Certificadas e criativas</p>
+      </div>
+      <!-- Feature 4 -->
+      <div class="space-y-1">
+        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm text-brand-accentPink mb-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        </div>
+        <h4 class="text-xs font-bold text-brand-charcoal tracking-wide uppercase">Experiência 5★</h4>
+        <p class="text-[11px] text-gray-500">Clientes 100% satisfeitas</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+<!-- END: HeroSection -->
+<!-- BEGIN: ServicesSection -->
+<section class="py-20 bg-white" data-purpose="services-showcase" id="servicos">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<span class="text-xs uppercase tracking-[0.25em] font-semibold text-gray-500 block mb-2">
+            Nossos Serviços
+          </span>
+<h2 class="font-cormorant text-4xl sm:text-5xl font-normal text-brand-charcoal">
+            Cuide de Você
+          </h2>
+</div>
+<a class="mt-4 md:mt-0 inline-flex items-center text-xs uppercase font-semibold tracking-widest text-brand-charcoal hover:text-brand-accentPink transition-colors" href="#agendamento">
+          Ver Todos os Serviços →
+        </a>
+</div>
+<!-- Services Grid (6 cards) -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+<!-- Service 1: Manicure -->
+<div class="flex flex-col group cursor-pointer">
+<div class="aspect-square rounded-2xl overflow-hidden bg-brand-softPink mb-4 relative shadow-sm">
+<img alt="Manicure Clássica" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9pb1REes10Lf8rtIp-Cits6RgGElqJdpDtBWbtfS8OEgCSPFcrTSBfiTbu_jezzBshL2Kfb9aOo_qdd7-a1KBqkNoXqwqbtxAlZH9PguYPp1mZNN3xBByoWCCl3kpUsRjSSBgw2D5rW506YdH-1E7-luFj2HxawEszNSZ1GSb3qJBYnuBlfNili4wEuzaw03vWgyNW27WVmoEwK0f7AaGB517HtNlNsR0Ulz_Df5vsOL50LSlBvuy0w">
+</div>
+<div class="w-7 h-7 rounded-full bg-brand-nude flex items-center justify-center text-brand-charcoal mb-2">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14.121 15.536c-1.171 1.952-3.07 1.952-4.242 0-1.172-1.953-1.172-5.119 0-7.072 1.171-1.952 3.07-1.952 4.242 0 1.172 1.953 1.172 5.12 0 7.072z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<h3 class="text-sm font-bold text-brand-charcoal mb-1">Manicure</h3>
+<p class="text-xs text-gray-500 leading-relaxed">Limpeza, formato e nutrição para unhas naturais fortes e bem tratadas.</p>
+</div>
+<!-- Service 2: Pedicure -->
+<div class="flex flex-col group cursor-pointer">
+<div class="aspect-square rounded-2xl overflow-hidden bg-brand-softPink mb-4 relative shadow-sm">
+<img alt="Pedicure Spa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT7HErRRrsCpv2-rs4MiC16yottzDmuorJNo_MliY3bXrD-Z6OUXSFhcbYTCCoFkzrsKAIBJlZEIYW8ls81DQP_-_Z_7M6JBSCBM4JZ_biMyLwpquiWRb0EA1xozF1PetRrr9FsPebZnrYxkDkcp_-t4sR14kytUF2twyCfHStL7c0YmczOJrxZpQsXDH1y3Y63FMsX5qit545CzCNXR6IUAxIG1v9OJsokTcUagLxSso6G-K9roHFZg">
+</div>
+<div class="w-7 h-7 rounded-full bg-brand-nude flex items-center justify-center text-brand-charcoal mb-2">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<h3 class="text-sm font-bold text-brand-charcoal mb-1">Pedicure</h3>
+<p class="text-xs text-gray-500 leading-relaxed">Cuidado revigorante para pés macios, renovados e hidratados.</p>
+</div>
+<!-- Service 3: Alongamento de Unhas -->
+<div class="flex flex-col group cursor-pointer">
+<div class="aspect-square rounded-2xl overflow-hidden bg-brand-softPink mb-4 relative shadow-sm">
+<img alt="Alongamento de Unhas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjrjamhxUprrsBi_xhjMJLp1njE7p-8Qg12e1nGnqeN8lSDMqhPDkR3f1i6SlGxXQKZ9Ylw2cl8neerui2sUfqxiJvTLOYaiaiG2ArRuyIDfDHnpcJsV9s4nAIpVraV5AHAwk4t1PjhAUHVstKNrY_cVzlx5pacNaNUnxXq-C_kgFlAdo0V1h0mv66jxvfZ4jIDCt90PBFl30RAEQW6-ztAmeCEk4SiZ3UvOloy3J-mcdeXWZatd3Y-w">
+</div>
+<div class="w-7 h-7 rounded-full bg-brand-nude flex items-center justify-center text-brand-charcoal mb-2">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<h3 class="text-sm font-bold text-brand-charcoal mb-1">Alongamentos</h3>
+<p class="text-xs text-gray-500 leading-relaxed">Comprimento dos sonhos, resistência durável e acabamento natural.</p>
+</div>
+<!-- Service 4: Nail Art -->
+<div class="flex flex-col group cursor-pointer">
+<div class="aspect-square rounded-2xl overflow-hidden bg-brand-softPink mb-4 relative shadow-sm">
+<img alt="Nail Art Exclusiva" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzt-rco4NFwZJME524INcIuLJ_N6fdY3GXpdZRABcrL8gvAJxe9CbCj85sBXdDsDb2FzoKx-c-aqhNmCEwWc4wQCvpPhUNFQLxBwlDjDk0ntnEXGTbj1JOL6vTQT09kBow1VQChWhszF-znUumG7B7Gs-xIwaEe37XLu01yxFGBSYQcpWBYwf3GxJYcTlueb1GoSzbkIjlKO2BrUUJmhajOJSj4LPbTQ3NFSK_LKB3FoFAr_Ctw2RR0A">
+</div>
+<div class="w-7 h-7 rounded-full bg-brand-nude flex items-center justify-center text-brand-charcoal mb-2">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<h3 class="text-sm font-bold text-brand-charcoal mb-1">Nail Art</h3>
+<p class="text-xs text-gray-500 leading-relaxed">Pinturas manuais e designs únicos para expressar sua essência.</p>
+</div>
+<!-- Service 5: Spa das Mãos & Pés -->
+<div class="flex flex-col group cursor-pointer">
+<div class="aspect-square rounded-2xl overflow-hidden bg-brand-softPink mb-4 relative shadow-sm">
+<img alt="Spa Terapêutico" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwilEPjP1VwVMzz4nhDWhQ0uKMc_vv1Jpg_S-ScxTy3iELAqSXFqmk2ZrwV1fzCM6jYDjEmVQi5Midz9nBmoToFLhQ15zucyeuQteC14OBJzJltkf4o4y0VatF7o4pgVHAv43j1WO0Dgv0N6ss5RIo49gGDwuJYTaZm8BRfm4PxngfZQKNdTFfJYNQiZuqqpBpv76rt0Chas3nudnYp6EpzUT_5odgppSFbvAekvF7fMVyK8XKNtB7gA">
+</div>
+<div class="w-7 h-7 rounded-full bg-brand-nude flex items-center justify-center text-brand-charcoal mb-2">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<h3 class="text-sm font-bold text-brand-charcoal mb-1">Spa das Mãos</h3>
+<p class="text-xs text-gray-500 leading-relaxed">Esfoliação, hidratação profunda e massagem relaxante aromática.</p>
+</div>
+<!-- Service 6: Esmaltação em Gel -->
+<div class="flex flex-col group cursor-pointer">
+<div class="aspect-square rounded-2xl overflow-hidden bg-brand-softPink mb-4 relative shadow-sm">
+<img alt="Esmaltação em Gel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8tA5p0mKkz3AN0q1u3lkbOq5BX_ZOourTnzdngkYaARtE11pbV59mH88lO1CXRgkhpVjoKD8Eym4jiLHhBc1a1So0mHLPCow0Le9k2ZS8AjN_y8Hedk_WdNvwPiV4VezfAl46Xhy4iDtu4Mf_DLPs84tP9duCxL3MISJB8bmPR1wUvAB55Nvu1Sj8feRQm8DUpdCSGogWwmSkpTVLs6E9JkGFCXAyYpdgCvar0B8g4UBm6XU7reRniA">
+</div>
+<div class="w-7 h-7 rounded-full bg-brand-nude flex items-center justify-center text-brand-charcoal mb-2">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<h3 class="text-sm font-bold text-brand-charcoal mb-1">Gel Polish</h3>
+<p class="text-xs text-gray-500 leading-relaxed">Brilho espelhado prolongado, secagem rápida em cabine UV e perfeição.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ServicesSection -->
+<!-- BEGIN: AboutSection -->
+<section class="py-20 bg-brand-nude border-t border-brand-borderMuted relative" data-purpose="about-studio" id="sobre">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Studio Interior Photo -->
+<div class="lg:col-span-6 relative">
+<div class="rounded-3xl overflow-hidden shadow-xl aspect-[4/3] border-4 border-white relative group">
+<img alt="Interior elegante do salão de unhas com poltronas rosa veludo e iluminação acolhedora" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACyjCMnWBe3BFEMTrIWu58OEuRjh-J1KTdT2S7Xq-ErimVwQi5rnC-7ASoz58jLzOr5kU9Mvv1vnabKdZTNr2HLwJP_zPBKWHPIT6kbwpGUipLn-Hp73O7uHn9WB9KcCkEl1NNMObSD202Uxqk4gModcdrFDzdeHQDJRS5cVMLcVAEZ_FscXmPNGNumZQ0fy9YsxYGblJw3vb-H8uTZT5mOw9kVla64mmdWjBNweKot2DVcrWYpvtjTw">
+<div class="absolute inset-0 bg-brand-charcoal/10"></div>
+<!-- Neon or Script Sign Badge overlay inside salon image -->
+<div class="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl shadow-md border border-brand-softPink">
+<p class="font-script text-xl text-brand-charcoal font-semibold leading-tight text-center">
+              Unhas Lindas,<br>Dias Radiantes ♡
+            </p>
+</div>
+</div>
+</div>
+<!-- About Details & 4 Core Pillars -->
+<div class="lg:col-span-6 space-y-6">
+<div>
+<span class="text-xs uppercase tracking-[0.25em] font-semibold text-gray-500 block mb-2">
+            Por Que Escolher a Nailé
+          </span>
+<h2 class="font-cormorant text-4xl sm:text-5xl font-normal text-brand-charcoal leading-tight">
+            Mais Que um Salão de Beleza
+          </h2>
+</div>
+<p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+          Criamos um refúgio acolhedor focado em realçar sua autoestima. Cada detalhe, desde o café artesanal até a biossegurança dos instrumentos, é planejado para proporcionar tranquilidade absoluta.
+        </p>
+<!-- 2x2 Benefits Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
+<!-- Benefit 1 -->
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-brand-softPink flex items-center justify-center flex-shrink-0 text-brand-charcoal">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<div>
+<h4 class="text-sm font-bold text-brand-charcoal">Profissionais Especialistas</h4>
+<p class="text-xs text-gray-500 mt-0.5 leading-snug">Nail designers apaixonadas por técnica e perfeição minuciosa.</p>
+</div>
+</div>
+<!-- Benefit 2 -->
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-brand-softPink flex items-center justify-center flex-shrink-0 text-brand-charcoal">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<div>
+<h4 class="text-sm font-bold text-brand-charcoal">Fórmulas Seguras &amp; Premium</h4>
+<p class="text-xs text-gray-500 mt-0.5 leading-snug">Esmaltes atóxicos 9-free, hipoalergênicos e de alta fixação.</p>
+</div>
+</div>
+<!-- Benefit 3 -->
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-brand-softPink flex items-center justify-center flex-shrink-0 text-brand-charcoal">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<div>
+<h4 class="text-sm font-bold text-brand-charcoal">Ambiente Relaxante</h4>
+<p class="text-xs text-gray-500 mt-0.5 leading-snug">Design acolhedor e calmo para desconectar da rotina corrida.</p>
+</div>
+</div>
+<!-- Benefit 4 -->
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-brand-softPink flex items-center justify-center flex-shrink-0 text-brand-charcoal">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<div>
+<h4 class="text-sm font-bold text-brand-charcoal">Arte Personalizada</h4>
+<p class="text-xs text-gray-500 mt-0.5 leading-snug">Do minimalismo sofisticado à nail art criativa sem limites.</p>
+</div>
+</div>
+</div>
+<div class="flex items-center space-x-6 pt-4">
+<a class="px-8 py-3.5 rounded-full bg-brand-softPink text-brand-charcoal text-xs font-semibold tracking-wider uppercase hover:bg-brand-blush hover-lift shadow-sm transition-all" href="#agendamento">
+            Reserve Seu Momento de Autocuidado →
+          </a>
+<div class="hidden sm:block">
+<span class="font-script text-2xl text-brand-charcoal font-medium">
+              Autocuidado Fica Lindo em Você ♡
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AboutSection -->
+<!-- BEGIN: GallerySection -->
+<section class="py-20 bg-white" data-purpose="work-gallery" id="galeria">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<span class="text-xs uppercase tracking-[0.25em] font-semibold text-gray-500 block mb-2">
+            Trabalhos em Destaque
+          </span>
+<h2 class="font-cormorant text-4xl sm:text-5xl font-normal text-brand-charcoal">
+            Nail Art Que Inspira
+          </h2>
+</div>
+<a class="mt-4 md:mt-0 inline-flex items-center text-xs uppercase font-semibold tracking-widest text-brand-charcoal hover:text-brand-accentPink transition-colors" href="#galeria">
+          Ver Galeria Completa →
+        </a>
+</div>
+<!-- 6 Showcase Image Cards Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<!-- Showcase 1: Nude com Flores Delicadas -->
+<div class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-sm">
+<img alt="Unhas nudes com flores delicadas pintadas à mão" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr0Qr2_k5a0bRULA237ufN0yQgdrFUnJsfo19Y5CMH_cmQ4NSsWhcaXGAujgjFcL68u5j4cO47GzoAXJmVxkLyLCpIU91mhIdAJRibwm8zOAQ2WMOIQ0aXPMuaeuWQMTWtI2P8GPA_KAVVZZUvxDgdf1tI0jc79sO9sSapsE3o43-4sxBexm13VC7e9YeHfDjrHaYxWrU5fSluvPVrmBCeXIycwdCscU2iApoTGsmHB9bmqIouypFY5Q">
+<div class="absolute inset-0 bg-brand-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+<span class="text-white text-[11px] font-semibold tracking-wide">Floral Minimalista</span>
+</div>
+</div>
+<!-- Showcase 2: Vinho Clássico Brilhante -->
+<div class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-sm">
+<img alt="Unhas cor vinho cereja profundo acabamento espelhado" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMUYSEF8rzhKWnxWl12wziXHF5W-Q7h6U13h1GUgPKbsLo3S_XSWTgmGwIvON3oBXOUK_Xb1XiyFqOoaK5P0B13cSV4sSmazHGKraiQaGZ_HqBPbNZJSk5PfQdF78gDszwmdn41k-BQxvpz4orTbm41Q2C9w3_q5qKJQPDVp8UTgQC3xgggTEPTCnM02mboYAdOjrtL9QMDDURrvLiQgkrkC6X_tcOhQU3fFWpI15QpKjktQSXLMah7g">
+<div class="absolute inset-0 bg-brand-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+<span class="text-white text-[11px] font-semibold tracking-wide">Vermelho Cereja Lustroso</span>
+</div>
+</div>
+<!-- Showcase 3: Francesinha com Laço Delicado -->
+<div class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-sm">
+<img alt="Design coquette de unhas com delicados laços pretos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2wY-n8GTCx7fl2gc-N5D96aDhis7QYdhXsIYwgkNCgPN7-BwgXbWfiSq1rfPJZIOWgvS3v_OTocn1C8o99_TwcOiCea40ir6Ko1g78Hp12BUdjslnLQFqYPN9GfMIOz9QxV24Rl0G4g8CFar0Cz1ZUpF0qq4qoW88nayylRXGJIjxVYBXnxjtrFD3SuWpLoomJDLJsAnzWSI91XWWC26VLXzC16dXX6_CslMmbjA9A8OaDrhF7FU-ew">
+<div class="absolute inset-0 bg-brand-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+<span class="text-white text-[11px] font-semibold tracking-wide">Coquette &amp; Laços</span>
+</div>
+</div>
+<!-- Showcase 4: Brilho & Estrelas Douradas -->
+<div class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-sm">
+<img alt="Nail art cósmica delicada com folha de ouro" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEnDrykfLlwxD4xieuN-AgjFaX1hpQjw6xX9dIo7CTc7Koe3rpHtjMEGFWTTMOOv2RCUpAcu5kjYfXGZC-2J1MD32elYvnmKm77HC0Kb1GFCU3zOsQzXg1lu62qrJjaqmdQfs3LNdeBa5mITlyimtVVG8SR-OArw95krhi7BWxraIYpxdk0oIXpGAtIGpYD6DsGCQJrQTUrXRIUco-zOi4IQFoMH9sB_BkKp2J0ExV0v-XkkEvZOZk9A">
+<div class="absolute inset-0 bg-brand-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+<span class="text-white text-[11px] font-semibold tracking-wide">Folhas de Ouro</span>
+</div>
+</div>
+<!-- Showcase 5: Verde Oliva Botânico -->
+<div class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-sm">
+<img alt="Unhas tom verde oliva com detalhes orgânicos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0-M6FNQLb_Tja_m-d8ECjH5BRawtCLTjmyX4aU3h9YIkcut-5yuZa5KWrMD2datoWbDG-9VgSSrZSs5LFeWMoW_hxSxuK6-_gJxh_XEImDGB8jurw0v8yDljwtaMCrvVY4z7lS3UiyHQ-z49VHTe9yn1oGxtL9_U_uIAz1ozFsVfY5zZ7XkMml9PukuAEFNjjYg0iY1zUk6kO0EhUh2_Hfu6k42zZum5JjZPrN3UAhbMTDrv0cCrkbg">
+<div class="absolute inset-0 bg-brand-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+<span class="text-white text-[11px] font-semibold tracking-wide">Oliva Botânica</span>
+</div>
+</div>
+<!-- Showcase 6: Azul Real Contemporâneo -->
+<div class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-sm">
+<img alt="Nail art geométrica em tons de azul cobalto e branco" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaOorV4v-YtDtLjh_0CeIZRTM1X6DEtYhqXjNqOMtKxvXkXBNL-kMJ7sfKn1E2JyPuNupCT58M4KQcNh0o_bHiw8VwClYOsNI_WSl4zCLw8PXf4dJijvCvM2oXBcCub-WQY06_ttv8FoieohppON1yXu36DNtusRFU5zFu675vC_z-7zxiErJLiHKJGb2FmvjQN8OMGAHYtjXtuXaFxd7Dx7vcb3IoVr_GQmJ81_Bi7XEZkgg_HO8JMw">
+<div class="absolute inset-0 bg-brand-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+<span class="text-white text-[11px] font-semibold tracking-wide">Azul Cobalto &amp; Art</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: GallerySection -->
+<!-- BEGIN: PromoBannerSection -->
+<section class="py-16 bg-[#F3DDD5] relative overflow-hidden" data-purpose="promo-banner" id="agendamento">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<!-- Promo Text Details -->
+<div class="md:col-span-7 space-y-4">
+<span class="text-xs uppercase tracking-[0.25em] font-bold text-brand-charcoal/70 block">
+          Oferta Especial
+        </span>
+<h2 class="font-cormorant text-4xl sm:text-5xl lg:text-6xl font-normal text-brand-charcoal leading-none">
+          Cuide-se. Economize. Brilhe.
+        </h2>
+<p class="text-sm sm:text-base text-brand-charcoal/80 max-w-lg leading-relaxed">
+          Ganhe <strong class="text-brand-charcoal font-semibold">20% de desconto</strong> no seu primeiro agendamento. Porque ter unhas impecáveis é sempre a melhor escolha para o seu dia.
+        </p>
+<div class="pt-2">
+<a class="inline-flex items-center px-8 py-3.5 rounded-full bg-brand-charcoal text-white text-xs font-semibold tracking-wider uppercase hover:bg-neutral-800 hover-lift shadow-md transition-all" href="#contato">
+            Garantir Meu Desconto →
+          </a>
+</div>
+</div>
+<!-- Nail Polish Visual & Calligraphic Note -->
+<div class="md:col-span-5 flex items-center justify-center md:justify-end relative">
+<div class="relative w-48 h-48 sm:w-60 sm:h-60 rounded-full bg-white/40 p-4 flex items-center justify-center backdrop-blur-xs">
+<!-- Bottle of pink liquid enamel dripping aesthetic placeholder -->
+<img alt="Frasco elegante de esmalte derramando suavemente gota de cor rosa" class="w-full h-full object-cover rounded-full shadow-inner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4JesH7_H4Q4dR3tLVaBweL7fikoIAtF0OrYhfVYej0x1DsGmU7YOQdE1s_jEEsbiIJEi2axoXAmullxUCjmhV9ulWOTZFk_AKugbpW4NsSbiOYMNo2YSxx2z-eTjK8pujUmqVbxSfFkuLG0UnDS9JxMNllq7WZox-w_xBUTFSnC53A7SrMhbGcYbUZLjXaKnQLAgLRqW64nHVew03xRtrVVzSCM-HGTKRQYMW2iQMTqGTb0mU-rL6Jg">
+</div>
+<div class="absolute -right-2 sm:right-4 top-2 bg-white/90 px-4 py-2 rounded-xl shadow-sm rotate-3">
+<p class="font-script text-xl sm:text-2xl text-brand-charcoal leading-tight">
+            Pequenos Detalhes,<br>Grande Felicidade ♡
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: PromoBannerSection -->
+<!-- BEGIN: TestimonialsSection -->
+<section class="py-20 bg-brand-nude" data-purpose="customer-reviews" id="depoimentos">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Section Title & Arrows -->
+<div class="flex items-center justify-between mb-12">
+<div>
+<span class="text-xs uppercase tracking-[0.25em] font-semibold text-gray-500 block mb-2">
+            O Que Nossos Clientes Dizem
+          </span>
+<h2 class="font-cormorant text-4xl sm:text-5xl font-normal text-brand-charcoal">
+            Pessoas Reais. Unhas Incríveis.
+          </h2>
+</div>
+<!-- Navigation Buttons -->
+<div class="flex items-center space-x-2">
+<button aria-label="Depoimento anterior" class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white text-brand-charcoal transition-colors" type="button">
+            ←
+          </button>
+<button aria-label="Próximo depoimento" class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white text-brand-charcoal transition-colors" type="button">
+            →
+          </button>
+</div>
+</div>
+<!-- Testimonials Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-white p-7 rounded-2xl shadow-sm border border-brand-borderMuted flex flex-col justify-between space-y-6">
+<p class="text-sm text-gray-700 italic leading-relaxed">
+            "Experiência simplesmente maravilhosa! A equipe é super atenciosa, o ambiente cheira a lavanda e minhas unhas nunca duraram tanto intactas!"
+          </p>
+<div class="flex items-center justify-between pt-4 border-t border-gray-100">
+<div class="flex items-center space-x-3">
+<img alt="Foto de Mariana Silva" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMv77MrRmYJbpmpseZipPOxV_3LpamRulceZg_DnBlzyQqbZdoIyD8RpcBN9qqz-q5V6vbtv_HHuS3QXje64z4gdZj3LZbnCtp_9U1iOsCRbSMV8ocsg-zJKNR7H3a_p-YtIluxiENAqYWhXMCLbo9O91tTtRV8KH34w2l6zzpbo8AmzszMYMqQM7xnlSAdZ1ZoAXEbVEka5vsBWo2JQeO_pHBVDQCFcqWO-6W7iAFaNNDansk2w_q1A">
+<div>
+<h4 class="text-xs font-bold text-brand-charcoal">Mariana Silva</h4>
+<p class="text-[10px] text-gray-500">Cliente há 1 ano</p>
+</div>
+</div>
+<!-- Star rating -->
+<div class="flex text-amber-400 text-xs tracking-tighter">
+              ★★★★★
+            </div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white p-7 rounded-2xl shadow-sm border border-brand-borderMuted flex flex-col justify-between space-y-6">
+<p class="text-sm text-gray-700 italic leading-relaxed">
+            "O estúdio mais limpo e impecável que já fui. Os materiais esterilizados abertos na sua frente dão total confiança. Sou apaixonada pelo alongamento de fibra!"
+          </p>
+<div class="flex items-center justify-between pt-4 border-t border-gray-100">
+<div class="flex items-center space-x-3">
+<img alt="Foto de Juliana Costa" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIn5knsM573c2WHRppDgHG1EIhAbHWQgWuSyuZhRSFMFfCbxpBP5c_hNDFnOmog7A1Odlo0r1r7-uYphwX3pwi114KnEfDsP27G56RGsJZG5zJ4jeGQJr_4IPUBV7r3ozbutu7hxlEOQLlVjZg5JGkDmEWseG4ayv0jbqKKa-k5xnT0N4c_hZKD9VmB2vEc-5MXs9Z6xmXwp4QR0w9rvpXmAhRQfVWTFKfanTx-1KGROdtOHqCNxmFNQ">
+<div>
+<h4 class="text-xs font-bold text-brand-charcoal">Juliana Costa</h4>
+<p class="text-[10px] text-gray-500">Cliente Fidelidade</p>
+</div>
+</div>
+<div class="flex text-amber-400 text-xs tracking-tighter">
+              ★★★★★
+            </div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white p-7 rounded-2xl shadow-sm border border-brand-borderMuted flex flex-col justify-between space-y-6">
+<p class="text-sm text-gray-700 italic leading-relaxed">
+            "Meu momento preferido da semana. Tomar um cappuccino enquanto fazem essa nail art francesa moderna é a minha terapia. Recomendo de olhos fechados!"
+          </p>
+<div class="flex items-center justify-between pt-4 border-t border-gray-100">
+<div class="flex items-center space-x-3">
+<img alt="Foto de Beatriz Ramos" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVOEDbLT42WtSvBoaylYSHR5iZ5jENW0i7VRi2tEplXnToq37vh5IXuN5CesFFo7dGMWUelyimb3urGwBD5-xcZAYbRRDQcXDxqpDON-qrW-13rDx8WZcOW-ItHVRixzAYoTjvq0EDNn89ZoAsAvioyHt_ZHI-2TTAh8J0kKSjSCfOPRS0F0iWUq0-2Q9pW6xaEKVAPdw0K4JiQ8d2HgoeHhQ-Bz7ZU11sPmL18oRbzbq0nYFIcH5U0A">
+<div>
+<h4 class="text-xs font-bold text-brand-charcoal">Beatriz Ramos</h4>
+<p class="text-[10px] text-gray-500">Cliente VIP</p>
+</div>
+</div>
+<div class="flex text-amber-400 text-xs tracking-tighter">
+              ★★★★★
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TestimonialsSection -->
+<!-- BEGIN: MainFooter -->
+<footer class="bg-[#FAF7F5] border-t border-brand-borderMuted pt-16 pb-12" data-purpose="footer-contact" id="contato">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+<!-- Brand & Social Column -->
+<div class="lg:col-span-4 space-y-4">
+<div>
+<span class="font-cormorant text-2xl lg:text-3xl font-bold tracking-[0.22em] uppercase text-brand-charcoal">
+            NAILÉ
+          </span>
+<span class="block text-[9px] uppercase tracking-[0.35em] text-gray-500 font-semibold -mt-1">
+            Nail Studio
+          </span>
+</div>
+<p class="text-xs text-gray-600 max-w-xs leading-relaxed">
+          Visual impecável. Você mais confiante e feliz todos os dias. Cuidado premium com excelência em cada traço.
+        </p>
+<!-- Social Icons -->
+<div class="flex items-center space-x-3 text-brand-charcoal pt-2">
+<a aria-label="Instagram" class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-brand-charcoal hover:text-white transition-colors" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a aria-label="Facebook" class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-brand-charcoal hover:text-white transition-colors" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg>
+</a>
+<a aria-label="Pinterest" class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-brand-charcoal hover:text-white transition-colors" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.334 1.357-.057.238-.19.289-.44.175-1.644-.764-2.672-3.16-2.672-5.086 0-4.14 3.008-7.944 8.676-7.944 4.556 0 8.1 3.247 8.1 7.587 0 4.526-2.854 8.17-6.816 8.17-1.331 0-2.583-.692-3.011-1.507l-.821 3.131c-.297 1.144-1.101 2.578-1.64 3.454 1.229.378 2.537.584 3.896.584 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"></path></svg>
+</a>
+<a aria-label="TikTok" class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-brand-charcoal hover:text-white transition-colors" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.98v8.68c0 1.7-.42 3.39-1.28 4.84-1.6 2.7-4.5 4.45-7.65 4.44-3.19.01-6.15-1.74-7.75-4.49-1.6-2.75-1.6-6.19 0-8.94 1.6-2.75 4.56-4.5 7.75-4.49.52 0 1.04.05 1.55.15v4.13c-.5-.15-1.03-.23-1.55-.23-1.89-.01-3.62 1.09-4.51 2.77-.9 1.68-.9 3.73 0 5.41.9 1.68 2.63 2.78 4.51 2.77 1.88.01 3.6-1.08 4.51-2.75.46-.85.69-1.8.69-2.77V.02z"></path></svg>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="lg:col-span-2 space-y-3">
+<h4 class="text-xs font-bold tracking-widest uppercase text-brand-charcoal">Links Rápidos</h4>
+<ul class="space-y-2 text-xs text-gray-600">
+<li class=""><a class="hover:text-brand-charcoal transition-colors" href="#inicio">Início</a></li>
+<li class=""><a class="hover:text-brand-charcoal transition-colors" href="#servicos">Serviços</a></li>
+<li class=""><a class="hover:text-brand-charcoal transition-colors" href="#galeria">Galeria</a></li>
+<li class=""><a class="hover:text-brand-charcoal transition-colors" href="#sobre">Sobre Nós</a></li>
+<li class=""><a class="hover:text-brand-charcoal transition-colors" href="#depoimentos">Depoimentos</a></li>
+<li class=""><a class="hover:text-brand-charcoal transition-colors" href="#contato">Contato</a></li>
+</ul>
+</div>
+<!-- Services Links -->
+<div class="lg:col-span-2 space-y-3">
+<h4 class="text-xs font-bold tracking-widest uppercase text-brand-charcoal">Serviços</h4>
+<ul class="space-y-2 text-xs text-gray-600">
+<li class=""><a class="hover:text-brand-charcoal transition-colors" href="#servicos">Manicure Express</a></li>
+<li class=""><a class="hover:text-brand-charcoal transition-colors" href="#servicos">Pedicure Relaxante</a></li>
+<li class=""><a class="hover:text-brand-charcoal transition-colors" href="#servicos">Alongamento em Fibra</a></li>
+<li class=""><a class="hover:text-brand-charcoal transition-colors" href="#servicos">Nail Art Exclusiva</a></li>
+<li class=""><a class="hover:text-brand-charcoal transition-colors" href="#servicos">Esmaltação em Gel</a></li>
+<li class=""><a class="hover:text-brand-charcoal transition-colors" href="#servicos">Spa das Mãos &amp; Pés</a></li>
+</ul>
+</div>
+<!-- Contact Info & Calligraphy -->
+<div class="lg:col-span-4 space-y-3">
+<h4 class="text-xs font-bold tracking-widest uppercase text-brand-charcoal">Fale Conosco</h4>
+<div class="space-y-2 text-xs text-gray-600">
+<p class="flex items-start space-x-2">
+<span class="">📍</span>
+<span class="">Av. Paulista, 1200 - Bela Vista, São Paulo - SP, 01310-100</span>
+</p>
+<p class="flex items-center space-x-2">
+<span class="">📞</span>
+<span class="">+55 (11) 98765-4321</span>
+</p>
+<p class="flex items-center space-x-2">
+<span class="">✉️</span>
+<span class="">contato@nailestudio.com.br</span>
+</p>
+<p class="flex items-start space-x-2">
+<span class="">🕒</span>
+<span class="">Seg - Sáb: 09:00 - 19:30<br>Dom: 10:00 - 16:00</span>
+</p>
+</div>
+<div class="pt-4">
+<p class="font-script text-2xl text-brand-charcoal font-medium">
+            Unhas Lindas, Dias Mais Radiantes ♡
+          </p>
+</div>
+</div>
+</div>
+<!-- Bottom Copyright & Legal Links -->
+<div class="max-w-7xl mx-auto px-6 lg:px-12 mt-12 pt-6 border-t border-brand-borderMuted flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+<p class="">© 2024 Nailé Nail Studio. Todos os direitos reservados.</p>
+<div class="flex space-x-6 mt-3 sm:mt-0">
+<a class="hover:text-brand-charcoal transition-colors" href="#">Política de Privacidade</a>
+<a class="hover:text-brand-charcoal transition-colors" href="#">Termos de Serviço</a>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+
+
+</body></html>
