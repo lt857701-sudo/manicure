@@ -73,21 +73,23 @@
 </header>
 <!-- END: MainHeader -->
 <!-- BEGIN: HeroSection -->
-<section class="relative overflow-hidden bg-gradient-to-b from-[#FAF7F5] to-[#F6ECE7]/60 pt-10 pb-16 lg:py-20" data-purpose="hero-section" id="inicio">
-  <!-- Full-width background image layer -->
-  <div class="absolute inset-0 min-h-[520px] lg:min-h-[620px] overflow-hidden bg-cover bg-center md:bg-right" style="background-image: url('assets/images/hero.png');">
-    <!-- Mobile: modelo visível no topo, texto ancorado embaixo -->
-    <div class="absolute inset-0 z-0 pointer-events-none md:hidden" style="background: linear-gradient(to bottom, rgba(255,245,242,0.08) 0%, rgba(255,245,242,0.55) 28%, rgba(255,245,242,0.94) 44%, #FFF5F2 56%);"></div>
-    <!-- Desktop: texto à esquerda, modelo à direita -->
-    <div class="absolute inset-0 z-0 pointer-events-none hidden md:block" style="background: linear-gradient(to right, #FFF5F2 0%, #FFF5F2 35%, rgba(255, 245, 242, 0.85) 45%, rgba(255, 245, 242, 0) 55%);"></div>
+<section class="relative overflow-hidden bg-[#FAF7F5] pt-10 pb-16 lg:py-20" data-purpose="hero-section" id="inicio">
+  <!-- Hero Image Layer: real  for controlled framing (model on top, text below on mobile) -->
+  <div class="absolute inset-0 min-h-[520px] lg:min-h-[620px] overflow-hidden">
+    <img alt="Modelo com unhas impecáveis — hero do estúdio Nailé" class="w-full h-full object-cover md:object-right" src="assets/images/hero.png">
+    <!-- Mobile gradient: fade from transparent at top to solid at bottom so text below is readable -->
+    <div class="absolute inset-0 z-0 pointer-events-none md:hidden" style="background: linear-gradient(to bottom, transparent 0%, transparent 55%, rgba(255,245,242,0.9) 75%, #FFF5F2 100%);"></div>
+    <!-- Desktop gradient: fade left side so left text stands out against right-side model -->
+    <div class="absolute inset-0 z-0 pointer-events-none hidden md:block" style="background: linear-gradient(to right, #FFF5F2 0%, #FFF5F2 40%, rgba(255,245,242,0.6) 55%, transparent 100%);"></div>
   </div>
 
   <!-- Constrained content container -->
   <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
-    <div class="relative min-h-[520px] lg:min-h-[620px] flex flex-col justify-end md:justify-between pb-12 md:pb-0 pt-4 lg:pt-8">
-      <!-- Hero Content: Text & CTA buttons on the left -->
-      <div class="relative z-10 max-w-xl space-y-6">
-        <div class="inline-flex items-center space-x-2">
+    <!-- Mobile: Image on top, text below (flex-col) -->
+    <div class="relative min-h-[520px] lg:min-h-[620px] flex flex-col md:flex-row md:items-center justify-between md:justify-end gap-8 md:gap-0 pt-4 lg:pt-8 pb-12 md:pb-0">
+      <!-- Hero Content: Text & CTA buttons -->
+      <div class="relative z-10 max-w-xl space-y-6 flex-1 md:flex-none md:max-w-[48%] order-2 md:order-1 text-center md:text-left">
+        <div class="inline-flex items-center space-x-2 justify-center md:justify-start">
           <span class="w-2 h-2 rounded-full bg-brand-accentPink"></span>
           <span class="text-xs uppercase tracking-[0.25em] font-semibold text-gray-500">
             Beleza na Ponta dos Dedos
@@ -97,10 +99,10 @@
           Unhas Impecáveis,<br>
           <span class="italic font-medium">Confiança</span> Todos os Dias
         </h1>
-        <p class="text-gray-600 text-base sm:text-lg max-w-lg font-normal leading-relaxed">
+        <p class="text-gray-600 text-base sm:text-lg max-w-lg font-normal leading-relaxed mx-auto md:mx-0">
           Cuidado premium para suas unhas, designs deslumbrantes e uma experiência relaxante de autocuidado — porque você merece sentir-se radiante.
         </p>
-        <div class="flex flex-wrap items-center gap-4 pt-2">
+        <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
           <a class="px-8 py-3.5 rounded-full bg-brand-charcoal text-white text-xs font-semibold tracking-wider uppercase hover:bg-neutral-800 hover-lift shadow-md transition-all" href="#agendamento">
             Agende Seu Horário →
           </a>
@@ -110,6 +112,8 @@
           </button>
         </div>
       </div>
+      <!-- Image spacer to preserve height on mobile so model stays "on top" -->
+      <div class="order-1 md:order-2 w-full md:w-[52%] flex flex-col justify-center md:justify-end hidden md:block"></div>
     </div>
   </div>
 </section>
