@@ -74,40 +74,73 @@
 <!-- END: MainHeader -->
 <!-- BEGIN: HeroSection -->
 <section class="relative overflow-hidden bg-[#FAF7F5] pt-10 pb-16 lg:py-20" data-purpose="hero-section" id="inicio">
-  <!-- Constrained content container -->
-  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
-    <!-- Hero: imagem e texto lado a lado no desktop; imagem em cima, texto embaixo no mobile -->
-    <div class="relative min-h-[520px] lg:min-h-[620px] flex flex-col md:flex-row md:items-center justify-between gap-8 md:gap-0 pt-4 lg:pt-8 pb-12 md:pb-0">
-      <!-- Imagem: mobile em cima (100% largura), desktop à esquerda (55%), sem degradê -->
-      <div class="w-full md:w-[55%] flex justify-center">
-        <img alt="Modelo com unhas impecáveis — hero do estúdio Nailé"
-             class="w-full h-full object-center md:object-right object-cover min-h-[400px] lg:min-h-[520px]"
-             src="assets/images/hero.png">
+  <!-- Imagem hero: desktop = full width de ponta a ponta como background (sem borda, sem degradê);
+       mobile = imagem em cima (100% largura), texto embaixo -->
+  <div class="absolute inset-0 w-full h-full object-cover hidden lg:block bg-cover bg-center" style="background-image: url('assets/images/hero.png')">
+    <!-- Filtro suave apenas para legibilidade do texto sobre a imagem no desktop -->
+    <div class="absolute inset-0 bg-gradient-to-r from-[#FAF7F5]/90 to-transparent"></div>
+  </div>
+
+  <!-- Container de conteúdo -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 min-h-[520px] lg:min-h-[620px] flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-0 pt-4 lg:pt-8 pb-12 lg:pb-0">
+    <!-- Texto e CTAs: à esquerda no desktop -->
+    <div class="relative z-10 flex-1 lg:w-[45%] flex flex-col justify-center text-left lg:text-left">
+      <div class="inline-flex items-center space-x-2">
+        <span class="w-2 h-2 rounded-full bg-brand-accentPink"></span>
+        <span class="text-xs uppercase tracking-[0.25em] font-semibold text-gray-500">
+          Beleza na Ponta dos Dedos
+        </span>
       </div>
-      <!-- Texto e CTAs: embaixo da imagem no mobile; à direita no desktop -->
-      <div class="relative z-10 max-w-xl space-y-6 flex-1 md:flex-none md:max-w-[45%] text-center md:text-left">
-        <div class="inline-flex items-center space-x-2 justify-center md:justify-start">
-          <span class="w-2 h-2 rounded-full bg-brand-accentPink"></span>
-          <span class="text-xs uppercase tracking-[0.25em] font-semibold text-gray-500">
-            Beleza na Ponta dos Dedos
-          </span>
-        </div>
-        <h1 class="font-cormorant text-5xl sm:text-6xl lg:text-7xl font-normal leading-[1.08] text-brand-charcoal tracking-tight">
-          Unhas Impecáveis,<br>
-          <span class="italic font-medium">Confiança</span> Todos os Dias
-        </h1>
-        <p class="text-gray-600 text-base sm:text-lg max-w-lg font-normal leading-relaxed mx-auto md:mx-0">
-          Cuidado premium para suas unhas, designs deslumbrantes e uma experiência relaxante de autocuidado — porque você merece sentir-se radiante.
-        </p>
-        <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
-          <a class="px-8 py-3.5 rounded-full bg-brand-charcoal text-white text-xs font-semibold tracking-wider uppercase hover:bg-neutral-800 hover-lift shadow-md transition-all" href="#agendamento">
-            Agende Seu Horário →
-          </a>
-          <button class="inline-flex items-center space-x-3 px-6 py-3 rounded-full border border-gray-300 text-xs font-semibold uppercase tracking-wider text-brand-charcoal hover:bg-white transition-colors" type="button">
-            <span class="w-6 h-6 rounded-full bg-brand-charcoal text-white flex items-center justify-center text-[10px]">▶</span>
-            <span class="">Conheça Nosso Estúdio</span>
-          </button>
-        </div>
+      <h1 class="font-cormorant text-5xl sm:text-6xl lg:text-7xl font-normal leading-[1.08] text-brand-charcoal tracking-tight">
+        Unhas Impecáveis,<br>
+        <span class="italic font-medium">Confiança</span> Todos os Dias
+      </h1>
+      <p class="text-gray-600 text-base sm:text-lg max-w-lg font-normal leading-relaxed">
+        Cuidado premium para suas unhas, designs deslumbrantes e uma experiência relaxante de autocuidado — porque você merece sentir-se radiante.
+      </p>
+      <div class="flex flex-wrap gap-4 pt-2">
+        <a class="px-8 py-3.5 rounded-full bg-brand-charcoal text-white text-xs font-semibold tracking-wider uppercase hover:bg-neutral-800 hover-lift shadow-md transition-all" href="#agendamento">
+          Agende Seu Horário →
+        </a>
+        <button class="inline-flex items-center space-x-3 px-6 py-3 rounded-full border border-gray-300 text-xs font-semibold uppercase tracking-wider text-brand-charcoal hover:bg-white transition-colors" type="button">
+          <span class="w-6 h-6 rounded-full bg-brand-charcoal text-white flex items-center justify-center text-[10px]">▶</span>
+          <span class="">Conheça Nosso Estúdio</span>
+        </button>
+      </div>
+    </div>
+    <!-- Spacer desktop para manter a imagem ao lado (a imagem já cobre tudo via background acima) -->
+    <div class="hidden lg:block w-[55%] flex justify-center"></div>
+  </div>
+
+  <!-- Mobile: imagem em cima (100% largura, sem borda), texto embaixo -->
+  <div class="lg:hidden pt-4 pb-12">
+    <div class="w-full flex justify-center mb-8">
+      <img alt="Modelo com unhas impecáveis — hero do estúdio Nailé"
+           class="w-full h-full object-cover min-h-[400px]"
+           src="assets/images/hero.png">
+    </div>
+    <div class="max-w-xl mx-auto px-6 space-y-6 text-center">
+      <div class="inline-flex items-center space-x-2 justify-center">
+        <span class="w-2 h-2 rounded-full bg-brand-accentPink"></span>
+        <span class="text-xs uppercase tracking-[0.25em] font-semibold text-gray-500">
+          Beleza na Ponta dos Dedos
+        </span>
+      </div>
+      <h1 class="font-cormorant text-5xl sm:text-6xl font-normal leading-[1.08] text-brand-charcoal tracking-tight">
+        Unhas Impecáveis,<br>
+        <span class="italic font-medium">Confiança</span> Todos os Dias
+      </h1>
+      <p class="text-gray-600 text-base sm:text-lg font-normal leading-relaxed">
+        Cuidado premium para suas unhas, designs deslumbrantes e uma experiência relaxante de autocuidado — porque você merece sentir-se radiante.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 pt-2">
+        <a class="px-8 py-3.5 rounded-full bg-brand-charcoal text-white text-xs font-semibold tracking-wider uppercase hover:bg-neutral-800 hover-lift shadow-md transition-all" href="#agendamento">
+          Agende Seu Horário →
+        </a>
+        <button class="inline-flex items-center space-x-3 px-6 py-3 rounded-full border border-gray-300 text-xs font-semibold uppercase tracking-wider text-brand-charcoal hover:bg-white transition-colors" type="button">
+          <span class="w-6 h-6 rounded-full bg-brand-charcoal text-white flex items-center justify-center text-[10px]">▶</span>
+          <span class="">Conheça Nosso Estúdio</span>
+        </button>
       </div>
     </div>
   </div>
