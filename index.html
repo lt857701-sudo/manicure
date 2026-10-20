@@ -74,17 +74,22 @@
 <!-- END: MainHeader -->
 <!-- BEGIN: HeroSection -->
 <section class="relative overflow-hidden bg-[#FAF7F5] pt-10 pb-16 lg:py-20" data-purpose="hero-section" id="inicio">
+  <!-- Hero Image Layer: desktop = imagem de fundo com gradiente (texto esquerda, modelo direita); mobile = sem imagem de fundo absoluta -->
+  <div class="absolute inset-0 min-h-[520px] lg:min-h-[620px] overflow-hidden hidden md:block bg-cover bg-right" style="background-image: url('assets/images/hero.png');">
+    <div class="absolute inset-0 z-0 pointer-events-none" style="background: linear-gradient(to right, #FFF5F2 0%, #FFF5F2 40%, rgba(255,245,242,0.6) 55%, transparent 100%);"></div>
+  </div>
+
   <!-- Constrained content container -->
   <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
-    <!-- Hero stack: IMAGEM em cima, TEXTO embaixo no mobile (sem sobreposição) -->
-    <div class="relative min-h-[520px] lg:min-h-[620px] flex flex-col md:flex-row md:items-center justify-between gap-8 md:gap-0 pt-4 lg:pt-8 pb-12 md:pb-0">
-      <!-- Imagem da hero: modelo centrada no mobile, direita no desktop; SEM degradê sobreposto -->
-      <div class="w-full md:w-[52%] flex justify-center">
+    <!-- Mobile: imagem em cima, texto embaixo (sem degradê sobreposto) -->
+    <div class="relative min-h-[520px] lg:min-h-[620px] flex flex-col md:flex-row md:items-center justify-between md:justify-end gap-8 md:gap-0 pt-4 lg:pt-8 pb-12 md:pb-0">
+      <!-- Imagem mobile: em fluxo normal, modelo centrada, SEM degradê -->
+      <div class="w-full md:hidden flex justify-center mb-8">
         <img alt="Modelo com unhas impecáveis — hero do estúdio Nailé"
-             class="w-full h-full object-cover md:object-right min-h-[400px] lg:min-h-[520px]"
+             class="w-full h-full object-center object-cover min-h-[400px]"
              src="assets/images/hero.png">
       </div>
-      <!-- Texto e CTAs: abaixo da imagem no mobile, ao lado no desktop -->
+      <!-- Texto e CTAs: embaixo da imagem no mobile, ao lado no desktop -->
       <div class="relative z-10 max-w-xl space-y-6 flex-1 md:flex-none md:max-w-[48%] order-2 md:order-1 text-center md:text-left">
         <div class="inline-flex items-center space-x-2 justify-center md:justify-start">
           <span class="w-2 h-2 rounded-full bg-brand-accentPink"></span>
