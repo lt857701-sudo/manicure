@@ -1,0 +1,41 @@
+/* =========================================
+   Nailé Nail Studio — Custom Styles
+   ========================================= */
+
+/* Base typography */
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #1A1817;
+  background-color: #FAF7F5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-script {
+  font-family: 'Caveat', cursive;
+}
+
+/* Smooth transitions & hover effects */
+.smooth-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Utility helpers */
+.section-spacing {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .section-spacing {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
